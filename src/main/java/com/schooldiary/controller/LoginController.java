@@ -1,7 +1,7 @@
 package com.schooldiary.controller;
 
 import com.schooldiary.model.User;
-import com.schooldiary.repository.MockUserRepository;
+import com.schooldiary.repository.JdbcUserRepository;
 import com.schooldiary.service.AuthService;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -13,7 +13,7 @@ public class LoginController {
     @FXML private Label errorLabel;
 
     private final AuthService authService =
-            new AuthService(new MockUserRepository());
+            new AuthService(new JdbcUserRepository());
 
     @FXML
     private void handleLogin() {
