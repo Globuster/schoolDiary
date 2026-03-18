@@ -17,15 +17,17 @@ public class JdbcUserRepository implements UserRepository {
 
             String sql = "SELECT * FROM users WHERE login = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
+
             stmt.setString(1, login);
 
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
+
                 return new User(
-                        rs.getInt("id"),
+                        rs.getLong("user_id"),
                         rs.getString("login"),
-                        rs.getString("password"),
+                        rs.getString("password_hash"),
                         Role.valueOf(rs.getString("role"))
                 );
             }

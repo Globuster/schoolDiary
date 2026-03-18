@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 40;"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.schooldiary.controller.MainController">
+    <Label text="Создание нового класса" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="classNumber" promptText="Цифра (9)" prefWidth="100"/>
+        <TextField fx:id="classLetter" promptText="Буква (А)" prefWidth="100"/>
+    </HBox>
+    <Button text="Добавить класс" onAction="#saveClass" style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+</VBox>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" alignment="TOP_CENTER" style="-fx-background-color: #f4f7f6;">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="Журнал оценок" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <TableView fx:id="gradesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Предмет" prefWidth="200" />
+            <TableColumn text="Оценка" prefWidth="100" />
+            <TableColumn text="Дата" prefWidth="150" />
+            <TableColumn text="Комментарий" prefWidth="300" />
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" style="-fx-padding: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <Label text="Список пользователей" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS" />
+        <TextField promptText="Поиск..." prefWidth="250" style="-fx-background-radius: 15;"/>
+    </HBox>
+
+    <TableView VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="ID" prefWidth="50" />
+            <TableColumn text="ФИО" prefWidth="250" />
+            <TableColumn text="Класс/Предмет" prefWidth="150" />
+            <TableColumn text="Контакты" prefWidth="200" />
+        </columns>
+    </TableView>
+</VBox>

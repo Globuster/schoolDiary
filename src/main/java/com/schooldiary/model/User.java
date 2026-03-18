@@ -2,19 +2,20 @@ package com.schooldiary.model;
 
 public class User {
 
-    private int id;
+    private long id;
     private String login;
-    private String password;
+    private String passwordHash;
     private Role role;
 
-    public User(int id, String login, String password, Role role) {
+    public User(long id, String login, String passwordHash, Role role) {
         this.id = id;
         this.login = login;
-        this.password = password;
+        this.passwordHash = passwordHash;
         this.role = role;
     }
 
+    public long getId() { return id; }
     public String getLogin() { return login; }
-    public String getPassword() { return password; }
+    public String getPasswordHash() { return passwordHash; }
     public Role getRole() { return role; }
 }

@@ -15,7 +15,7 @@ public class AuthService {
 
         User user = userRepository.findByLogin(login);
 
-        if (user != null && user.getPassword().equals(password)) {
+        if (user != null && user.getPasswordHash().equals(password)) {
             return user;
         }
 

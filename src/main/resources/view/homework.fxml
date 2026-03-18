@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" style="-fx-padding: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schooldiary.controller.MainController">
+    <Label text="📚 Домашние задания" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <HBox fx:id="teacherHwActions" spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #ecf0f1; -fx-padding: 15; -fx-background-radius: 10;">
+        <ComboBox fx:id="classSelect" promptText="Класс" prefWidth="100"/>
+        <TextField fx:id="hwTaskField" promptText="Описание задания..." HBox.hgrow="ALWAYS"/>
+        <DatePicker fx:id="hwDeadline" promptText="Срок сдачи"/>
+        <Button text="Выдать задание" onAction="#handleAddHomework" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <TableView fx:id="homeworkTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Предмет" prefWidth="120" />
+            <TableColumn text="Класс" prefWidth="80" /> <TableColumn text="Задание" prefWidth="350" />
+            <TableColumn text="Дедлайн" prefWidth="120" />
+        </columns>
+    </TableView>
+</VBox>

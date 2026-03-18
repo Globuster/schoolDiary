@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="10"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.schooldiary.controller.LoginController">
+<VBox alignment="CENTER" minHeight="600.0" minWidth="900.0" spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schooldiary.controller.LoginController">
 
-    <TextField fx:id="loginField" promptText="Логин"/>
-    <PasswordField fx:id="passwordField" promptText="Пароль"/>
-    <Button text="Войти" onAction="#handleLogin"/>
-    <Label fx:id="errorLabel" textFill="red"/>
+
+    <Text fill="#7b7676" text="Добро пожаловать, пожалуйста заполните поля!" textAlignment="CENTER">
+      <font>
+         <Font size="20.0" />
+      </font></Text>
+    <TextField id="loginField" fx:id="loginField" maxHeight="31.0" maxWidth="250.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" promptText="Логин">
+      <font>
+         <Font name="Calibri" size="14.0" />
+      </font>
+      <padding>
+         <Insets bottom="10.0" />
+      </padding></TextField>
+    <PasswordField fx:id="passwordField" maxHeight="31.0" maxWidth="250.0" prefHeight="31.0" prefWidth="250.0" promptText="Пароль">
+      <padding>
+         <Insets top="10.0" />
+      </padding></PasswordField>
+    <Button fx:id="loginBtn" onAction="#handleLogin" style="-fx-background-color: #2D88D4;" text="Войти" textFill="WHITE" />
+    <Label fx:id="errorLabel" textFill="red" />
 
 </VBox>
